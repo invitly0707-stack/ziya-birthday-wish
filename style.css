@@ -1,0 +1,422 @@
+/* CSS Variables for Royal Princess Theme */
+:root {
+    --soft-pink: #fdf0f3;
+    --dark-pink: #f4c2c2;
+    --lavender: #e6e6fa;
+    --rose-gold: #b76e79;
+    --white: #ffffff;
+    --golden: #ffd700;
+    --text-color: #5c3a41;
+}
+
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, var(--soft-pink), var(--lavender), var(--soft-pink));
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: var(--text-color);
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Typography Classes */
+.heading-font {
+    font-family: 'Great Vibes', cursive;
+    color: var(--rose-gold);
+}
+
+.text-font {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+/* Glassmorphism Utility */
+.glass-card {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 32px 0 rgba(183, 110, 121, 0.15);
+    border-radius: 20px;
+}
+
+/* Buttons */
+.glass-btn {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid var(--rose-gold);
+    color: var(--rose-gold);
+    font-family: 'Poppins', sans-serif;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    font-weight: 600;
+}
+
+.glass-btn:hover {
+    background: var(--rose-gold);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(183, 110, 121, 0.4);
+}
+
+/* Music Button */
+#music-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    font-size: 0.9rem;
+    padding: 10px 20px;
+}
+
+/* Animations */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.pulse-anim {
+    animation: pulse 2s infinite ease-in-out;
+}
+
+.glow-text {
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+/* Screen 1: Entry */
+#entry-screen {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, var(--soft-pink), var(--rose-gold));
+    z-index: 9999;
+    transition: opacity 1.5s ease, visibility 1.5s ease;
+}
+
+.entry-content {
+    text-align: center;
+    padding: 2rem;
+}
+
+.gift-box {
+    font-size: 6rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.gift-box:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.entry-content h1 {
+    font-size: 4rem;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+}
+
+.entry-content p {
+    color: var(--white);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Main Content Structure */
+.hidden {
+    display: none !important;
+}
+
+#main-content {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+/* Scroll Reveal Classes */
+.hidden-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.show-scroll {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Sections */
+header {
+    margin: 10vh 0 50px 0;
+}
+
+.grand-title {
+    font-size: 5rem;
+    margin-bottom: 10px;
+}
+
+.sub-title {
+    font-size: 1.5rem;
+    color: var(--rose-gold);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Typewriter Section */
+.typewriter-section {
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+    padding: 40px;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+.typewriter-content::after {
+    content: '|';
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/* Blessings Section */
+.section-title {
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+}
+
+.blessings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+.blessing-card {
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: var(--rose-gold);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.blessing-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(183, 110, 121, 0.3);
+}
+
+/* Premium Special Message */
+.premium-card {
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+    padding: 50px;
+}
+
+.premium-card h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.premium-card p {
+    font-size: 1.2rem;
+}
+
+/* Cake Section */
+.cake-section {
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.cake-emoji {
+    font-size: 8rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.cake-emoji:hover {
+    transform: scale(1.1);
+}
+
+.cake-instructions {
+    color: var(--rose-gold);
+    font-size: 1rem;
+    margin-top: -10px;
+}
+
+#cake-message {
+    font-size: 3rem;
+    margin-top: 20px;
+    transition: opacity 1s;
+}
+
+/* Photo Gallery */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+.gallery-item {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.3);
+    border: 4px solid var(--white);
+    border-radius: 10px;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    z-index: 2;
+}
+
+.placeholder-text {
+    color: var(--rose-gold);
+    font-weight: bold;
+    opacity: 0.6;
+}
+
+/* Footer */
+footer {
+    padding: 30px;
+    border-top: 1px solid rgba(255,255,255,0.4);
+    margin-top: 40px;
+}
+
+footer p {
+    color: var(--rose-gold);
+    font-weight: 600;
+}
+
+/* Background Animations Container */
+#background-animations {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.floating-element {
+    position: absolute;
+    animation: floatUp linear forwards;
+    opacity: 0.7;
+}
+
+.bg-message {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: var(--rose-gold);
+    background: rgba(255,255,255,0.5);
+    padding: 5px 15px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+    10% { opacity: 0.8; }
+    90% { opacity: 0.8; }
+    100% { transform: translateY(-20vh) rotate(360deg); opacity: 0; }
+}
+
+/* Particles/Confetti Base */
+.particle {
+    position: absolute;
+    pointer-events: none;
+    border-radius: 50%;
+    animation: explode 1s ease-out forwards;
+}
+
+@keyframes explode {
+    0% { transform: translate(0,0) scale(1); opacity: 1; }
+    100% { transform: translate(var(--tx), var(--ty)) scale(0); opacity: 0; }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .grand-title { font-size: 3.5rem; }
+    .entry-content h1 { font-size: 3rem; }
+    .section-title { font-size: 2.5rem; }
+    .premium-card { padding: 30px 20px; }
+    .gallery-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+}
+
+.gallery-grid-two {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 800px; /* Limits the gallery width on laptop/desktop to look elegant */
+    margin: 40px auto 60px auto;
+    padding: 0 15px;
+}
+
+/* Glass Frame for Photos */
+.gallery-item {
+    height: 400px; /* Laptop aur Desktop par image ki fixed standard height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.3);
+    border: 4px solid var(--white);
+    border-radius: 20px;
+    overflow: hidden; /* Frame se baahar jaane wali image ko crop karega */
+    box-shadow: 0 8px 25px rgba(183, 110, 121, 0.15);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+}
+
+/* Hover Effect on the Frame */
+.gallery-item:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 15px 35px rgba(183, 110, 121, 0.3);
+}
+
+/* Perfect Image Scaling & Responsiveness */
+.gallery-img {
+    width: 100%;       /* Image frame ki poori width legi */
+    height: 100%;      /* Image frame ki poori height legi */
+    object-fit: cover; /* Sabse Important: Image stretch ya chapti nahi hogi, perfectly crop hokar fit hogi */
+    object-position: center; /* Photo ka center part hamesha focus mein rahega */
+    transition: transform 0.6s ease;
+}
+
+/* Image zoom effect on frame hover */
+.gallery-item:hover .gallery-img {
+    transform: scale(1.05);
+}
+
+/* Mobile & Small Screens Optimization */
+@media (max-width: 768px) {
+    .gallery-grid-two {
+        grid-template-columns: 1fr; /* Mobile par dono photos ek ke niche ek aayengi */
+        max-width: 340px;           /* Mobile screen ke mutabik chhota size */
+        gap: 20px;
+    }
+    
+    .gallery-item {
+        height: 340px; /* Mobile par height thodi kam taaki scroll karne mein aasan ho */
+    }
+}

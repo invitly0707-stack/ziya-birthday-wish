@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Ziya ✨</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Background Music -->
+    <audio id="bg-music" loop>
+        <source src="https://assets.mixkit.co/music/preview/mixkit-beautiful-dream-493.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="music-btn" class="glass-btn">🎵 Play Music</button>
+
+    <!-- Global Floating Background Elements Container -->
+    <div id="background-animations"></div>
+
+    <!-- Screen 1: Surprise Entry Page -->
+    <div id="entry-screen">
+        <div class="entry-content">
+            <div class="gift-box pulse-anim" id="open-gift-btn">
+                🎁
+            </div>
+            <h1 class="heading-font glow-text">Hey Ziya! Tap Quickly</h1>
+            <p class="subtitle text-font">"A little surprise waiting for you from your brother..."</p>
+            <button class="glass-btn pulse-anim" id="open-surprise-btn">Open My Surprise, Princess</button>
+        </div>
+    </div>
+
+    <!-- Screen 2: Grand Birthday Reveal -->
+    <div id="main-content" class="hidden">
+        
+        <!-- Hero Section -->
+        <header class="reveal-section hidden-scroll">
+            <h1 class="heading-font grand-title glow-text">🎂 Happy Birthday My Little Sister 🎂</h1>
+            <h2 class="sub-title text-font">✨ Ziya - Our Little Princess ✨</h2>
+        </header>
+
+        <!-- Typewriter Wish Section -->
+        <section class="typewriter-section reveal-section hidden-scroll glass-card">
+            <div id="typewriter-text" class="text-font typewriter-content"></div>
+        </section>
+
+        <!-- Blessings Section -->
+        <section class="blessings-section reveal-section hidden-scroll">
+            <h2 class="heading-font section-title">Duas & Blessings</h2>
+            <div class="blessings-grid">
+                <div class="glass-card blessing-card">✨ May Allah always protect you.</div>
+                <div class="glass-card blessing-card">✨ May your dreams come true.</div>
+                <div class="glass-card blessing-card">✨ May your future shine brightly.</div>
+                <div class="glass-card blessing-card">✨ May happiness always stay with you.</div>
+                <div class="glass-card blessing-card">✨ May success follow you everywhere.</div>
+                <div class="glass-card blessing-card">✨ May your heart remain full of joy.</div>
+                <div class="glass-card blessing-card">✨ May every year bring beautiful memories.</div>
+                <div class="glass-card blessing-card">✨ May Allah bless you with endless smiles.</div>
+            </div>
+        </section>
+
+        <!-- Special Message Card -->
+        <section class="special-message-section reveal-section hidden-scroll">
+            <div class="glass-card premium-card">
+                <h2 class="heading-font">💖 A Special Message From Your Brother 💖</h2>
+                <p class="text-font">
+                    My Dearest Ziya,<br><br>
+                    You are truly the most beautiful blessing Allah has gifted to our family. Being your brother is a privilege, a responsibility, and my greatest joy.<br><br>
+                    Your laughter brings life to our home. No matter how much you grow up, remember that you will always remain that sweet little doll and our family's little princess to me.<br><br>
+                    I promise to always stand by your side—through every storm and every celebration. Your happiness will always be my priority, and my prayers will always follow you.<br><br>
+                    Never stop smiling. Never stop dreaming. Your brother will always back you up in everything you do.<br><br>
+                    Happy Birthday, Ziya.<br>
+                    <strong>Your Brother Loves You Endlessly ❤️</strong>
+                </p>
+            </div>
+        </section>
+
+        <!-- Animated Cake Section -->
+        <section class="cake-section reveal-section hidden-scroll">
+            <div id="cake-container" class="pulse-anim">
+                <div class="cake-emoji">🎂</div>
+                <div class="cake-instructions text-font">It's your brother's treat! Tap the cake and make a wish!</div>
+            </div>
+            <h2 id="cake-message" class="heading-font glow-text hidden">✨ Make A Wish, Ziya ✨</h2>
+        </section>
+
+        <!-- Photo Gallery Section (Updated to 2 Pictures Only) -->
+        <section class="gallery-section reveal-section hidden-scroll">
+            <h2 class="heading-font section-title">📸 Our Precious Memories</h2>
+            <div class="gallery-grid-two">
+                <!-- Image 1 -->
+                <div class="gallery-item glass-card">
+                    <img src="image/pic2.jpg.jpeg" alt="Brother and Ziya" class="gallery-img">
+                </div>
+                
+                <!-- Image 2 -->
+                <div class="gallery-item glass-card">
+                    <img src="image/pic1.jpg.jpeg" alt="Princess Ziya" class="gallery-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p class="text-font">Made with Endless Love by Your Brother 💖</p>
+            <p class="text-font">May Allah Bless You Always ✨</p>
+        </footer>
+
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
